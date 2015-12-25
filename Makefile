@@ -12,7 +12,7 @@ $(TARGET): $(OBJ)
 	$(CC) $^ -o $@
 
 $(OBJ): %.o: %.cpp $(HEAD)
-	$(CC) $^ -o $@ $(CFLAG)
+	$(CC) $< -o $@ $(CFLAG)
 
 clean:
 	rm -rf $(OBJ) $(TARGET)
